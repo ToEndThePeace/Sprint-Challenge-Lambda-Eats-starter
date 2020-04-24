@@ -8,9 +8,21 @@ export default function Header(props) {
       <div>
         <h1>Lambda Eats</h1>
         <nav>
-          <NavLink exact to="/" activeClassName="red">Home</NavLink>
-          <NavLink to="/pizza" activeClassName="red">New Pizza</NavLink>
-          <NavLink to="/help" activeClassName="red">Help</NavLink>
+          <NavLink 
+            exact 
+            to="/" 
+            activeClassName="red"
+            data-cy="home"
+          >Home</NavLink>
+          <NavLink 
+            to="/pizza" 
+            activeClassName="red"
+            data-cy="pizza"
+          >New Pizza</NavLink>
+          <NavLink 
+            to="/help" 
+            activeClassName="red"
+          >Help</NavLink>
         </nav>
       </div>
     </StyledHeader>

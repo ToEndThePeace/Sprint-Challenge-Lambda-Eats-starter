@@ -2,11 +2,10 @@ import { v4 as uuid } from "uuid";
 
 const testPizza = {
   id: uuid(),
-  name: "Bananas",
+  name: "BananasTestPizza",
   size: "small",
   sauce: "garlic",
-  special: "THIS IS FAKE",
-  toppings: ["bac", "pep", "bpr"]
+  special: "THIS IS FAKE"
 };
 
 describe("Pizza Form", () => {
@@ -16,8 +15,8 @@ describe("Pizza Form", () => {
   });
   it("can type a pizza name", () => {
     cy.get("[data-cy='name']")
-      .type("myPizzaName")
-      .should("have.value", "myPizzaName");
+      .type(testPizza.name)
+      .should("have.value", testPizza.name);
   });
   it("can select pepperoni and olives as toppings", () => {
     cy.get("[data-cy='pep']").check().should("have.checked");
@@ -25,16 +24,25 @@ describe("Pizza Form", () => {
   });
   it("can complete and submit form", () => {
     cy.get("[data-cy='sauce']")
-      .select("marinara")
-      .should("have.value", "marinara");
-    cy.get("[data-cy='size']").select("large").should("have.value", "large");
+      .select(testPizza.sauce)
+      .should("have.value", testPizza.sauce);
+    cy.get("[data-cy='size']").select(testPizza.size).should("have.value", testPizza.size);
     cy.get("[data-cy='special']")
-      .type("THIS IS A TEST")
-      .should("have.value", "THIS IS A TEST");
+      .type(testPizza.special)
+      .should("have.value", testPizza.special);
     cy.get("[data-cy='submit']").click();
-    cy.wait(3000);
   });
-  it("shows new pizza on homepage", () => {
-    cy.visit("/");
+  it("can go back to the home page", () => {
+    cy.get("[data-cy='home']").click();
+  });
+  it("successfully posted a new pizza", () => {
+    cy.contains(testPizza.name)
+      .next()
+      .contains(testPizza.size)
+      .next()
+      .contains(testPizza.sauce)
+      .next()
+      .next()
+      .contains(testPizza.special)
   });
 });
