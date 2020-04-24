@@ -13,8 +13,16 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+
+useRouteMatch() returns information about the current URL state as well as the current path so you can store that information in variables. the path variable can be used for your react routes while the url can be used for links.
+
 2. How would you explain form validation to someone who has never programmed before?
+
+Form validation is anything we do to try and force our users to give us properly formatted data. Typically users don't pay much attention to how they type information into a page, but validation lets us force them to
+
 3. In 1-2 sentences, define end to end testing.
+
+End-to-end testing allows us to test our site as a potential user. You create tests that interact with the UI and try to create test cases that will show you bugs or inconsistencies with your application.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section **will** prevent you from passing this challenge.
 
@@ -24,33 +32,33 @@ You are expected to be able to answer all these questions. Your responses contri
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] CD into the project base directory `cd lambda-eats`
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [done] Create a forked copy of this project.
+- [done] Add your project manager as collaborator on Github.
+- [done] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [done] CD into the project base directory `cd lambda-eats`
+- [done] Download project dependencies by running `npm install`
+- [done] Start up the app using `npm start`
+- [done] Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [done] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2: Minimum Viable Product
 
 Your MVP should include, at a minimum, the following components.
 
-- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
-- [ ] A form with a "/pizza" route
-- [ ] A name text input field
-- [ ] Validation for name - name must be at least 2 characters
-- [ ] Dropdown form component for pizza size
-- [ ] Checklist form component for toppings - at least 4 (hint: name each separately!)
-- [ ] Text input form component for special instructions
-- [ ] An Add to Order button that submits form and returns a database record of name, pizza size, sauce, and special instructions
+- [done] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
+- [done] A form with a "/pizza" route
+- [done] A name text input field
+- [done] Validation for name - name must be at least 2 characters
+- [done] Dropdown form component for pizza size
+- [done] Checklist form component for toppings - at least 4 (hint: name each separately!)
+- [done] Text input form component for special instructions
+- [done] An Add to Order button that submits form and returns a database record of name, pizza size, sauce, and special instructions
 
 #### Testing MVP
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
+- [done] test that you can add text to the box
 - [ ] test that you can select multiple toppings
 - [ ] test that you can submit the form
 
