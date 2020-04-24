@@ -57,7 +57,7 @@ export default function App(props) {
       .validate(value)
       .then((valid) => {})
       .catch((err) => {
-        alert(`Error: ${err.errors[0]}`);
+        console.log(`Error: ${err.errors[0]}`);
       });
     setFormValues({
       ...formValues,

@@ -58,7 +58,7 @@ Your MVP should include, at a minimum, the following components.
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
+- [done] test that you can add text to the box
 - [ ] test that you can select multiple toppings
 - [ ] test that you can submit the form
 
